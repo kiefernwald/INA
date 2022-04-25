@@ -32,3 +32,5 @@ defines.php
 # Sublime Text
 *.sublime-workspace
 *.sublime-project
+
+lib/vendor
