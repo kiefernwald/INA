@@ -14,7 +14,7 @@
     ],
 
     "require": {
-        "php": "^7.3.0",
+        "php": "^7.3|^8.0",
         "ext-json": "*",
         "ext-mbstring": "*",
         "phpmailer/phpmailer": "^6.0",
@@ -32,7 +32,6 @@
     "config": {
         "vendor-dir": "lib/vendor",
         "optimize-autoloader": true,
-        "prefer-dist": true,
-        "lock": false
+        "prefer-dist": true
     }
 }
