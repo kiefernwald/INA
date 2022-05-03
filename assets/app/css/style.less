@@ -6,12 +6,59 @@
 @import (less) "../../lib/codemirror/addon/hint/show-hint.css";
 @import "less/uikit/uikit.less";
 
-@global-primary-background: #007fff;
-//@global-primary-background: #1875f0;
-//@global-primary-background: #A0CECB;
-//@global-primary-background: #eb5424;
-//@global-primary-background: #485b8a;
-@global-link-color: @global-primary-background;
+@global-background: #ECF4DB;
+@global-border: #A6BCA0;
+@global-border-radius: 0;
+
+@global-primary-background: #22312D;
+//@global-success-background: #8cc14c;
+//@global-warning-background: #faa732;
+//@global-danger-background: #da314b;
+
+@global-selected-background: #A6BCA0;
+@global-light-background: #ECF4DB;
+@global-dark-background: #22312D;
+
+//
+// Text
+//
+
+@global-color: #22312D;
+@global-muted-color: #A6BCA0;
+
+@global-link-color: #22312D;
+@global-link-hover-color: #22312D;
+
+@global-contrast-color: #A6BCA0;
+
+//@global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//@global-font-size: 14px;
+//@global-line-height: 20px;
+//@global-font-weight: 300;
+
+body {
+    background: @global-background;
+}
+
+.uk-form select,
+.uk-form textarea,
+.uk-form input:not([type]),
+.uk-form input[type="text"],
+.uk-form input[type="password"],
+.uk-form input[type="datetime"],
+.uk-form input[type="datetime-local"],
+.uk-form input[type="date"],
+.uk-form input[type="month"],
+.uk-form input[type="time"],
+.uk-form input[type="week"],
+.uk-form input[type="number"],
+.uk-form input[type="email"],
+.uk-form input[type="url"],
+.uk-form input[type="search"],
+.uk-form input[type="tel"],
+.uk-form input[type="color"] {
+    background: @global-contrast-color;
+}
 
 .uk-noselect {
     -webkit-user-select: none !important;
@@ -79,7 +126,7 @@
 
 .app-header-topbar {
 
-    //background-color: @global-primary-background;
+    background-color: @global-dark-background;
     padding: 15px 0;
     box-sizing: border-box;
     min-height: 60px;
@@ -93,9 +140,9 @@
 
 .app-logo {
     display: inline-block;
-    width: 35px;
+    width: 114px;
     height: 35px;
-    background-image: url(../media/logo-plain.svg);
+    background-image: url(../media/logo-plain-bright.svg);
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 10px;
@@ -128,17 +175,17 @@
 
 .app-panel-dropdown .uk-nav-side a:hover,
 .app-panel-dropdown .uk-nav-side .uk-active a {
-    background: none;
+    background: @global-contrast-color;
     color: @global-primary-background;
 }
 
 .app-modulesbar > li > a {
     padding: 0 4px;
-    color: rgba(0,0,0,.3);
+    color: @global-selected-background;
 }
 
 .app-modulesbar a.uk-active {
-    color: @global-primary-background;
+    color: @global-light-background;
     position: relative;
 }
 
@@ -146,7 +193,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    border-bottom: 3px @global-primary-background solid;
+    border-bottom: 3px @global-light-background solid;
     bottom: -22px;
     left: 0;
 }
@@ -252,6 +299,30 @@ cp-gravatar canvas {
     border-top: 1px rgba(0,0,0,.1) solid;
 }
 
+// Login window
+
+.login-container {
+    width: 480px;
+    max-width: 90%;
+}
+
+.login-dialog {
+    box-shadow: 0 30px 75px 0 rgba(10, 25, 41, 0.2);
+}
+
+.login-image {
+    background-image: url('../media/logo-plain.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    height: 80px;
+}
+
+svg path,
+svg rect,
+svg circle {
+    fill: currentColor;
+}
 
 // vendor styles
 
@@ -263,8 +334,8 @@ cp-gravatar canvas {
     border: none !important;
 }
 
-.mce-fullscreen { 
-    z-index: 981 !important; 
+.mce-fullscreen {
+    z-index: 981 !important;
 }
 
 .uk-htmleditor-content,

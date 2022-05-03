@@ -60,7 +60,6 @@
 
                             <a href="@route('/')" class="uk-link-muted uk-text-bold app-name-link uk-flex uk-flex-middle">
                                 <span class="app-logo"></span>
-                                <span class="app-name">{{ $app['app.name'] }}</span>
                             </a>
 
                             <div class="uk-dropdown app-panel-dropdown uk-dropdown-close">
@@ -111,7 +110,7 @@
                                     <li class="uk-grid-margin">
                                         <a class="uk-display-block uk-panel-card-hover uk-panel-box uk-panel-space {{ (strpos($app['route'],'/assetsmanager')===0) ? 'uk-bg-primary uk-contrast':'' }}" href="@route('/assetsmanager')">
                                             <div class="uk-svg-adjust">
-                                                <img class="uk-margin-small-right inherit-color" src="@base('assets:app/media/icons/assets.svg')" width="40" height="40" data-uk-svg alt="assets" /> 
+                                                <img class="uk-margin-small-right inherit-color" src="@base('assets:app/media/icons/assets.svg')" width="40" height="40" data-uk-svg alt="assets" />
                                             </div>
                                             <div class="uk-text-truncate uk-text-small uk-margin-small-top">@lang('Assets')</div>
                                         </a>
@@ -121,7 +120,7 @@
                                     <li class="uk-grid-margin">
                                         <a class="uk-display-block uk-panel-card-hover uk-panel-box uk-panel-space {{ (strpos($app['route'],'/finder')===0) ? 'uk-bg-primary uk-contrast':'' }}" href="@route('/finder')">
                                             <div class="uk-svg-adjust">
-                                                <img class="uk-margin-small-right inherit-color" src="@base('assets:app/media/icons/finder.svg')" width="40" height="40" data-uk-svg alt="assets" /> 
+                                                <img class="uk-margin-small-right inherit-color" src="@base('assets:app/media/icons/finder.svg')" width="40" height="40" data-uk-svg alt="assets" />
                                             </div>
                                             <div class="uk-text-truncate uk-text-small uk-margin-small-top">@lang('Finder')</div>
                                         </a>
@@ -143,7 +142,7 @@
                                     <li class="uk-grid-margin">
                                         <a class="uk-display-block uk-panel-box uk-panel-card-hover uk-panel-space {{ (strpos($app['route'],'/accounts')===0) ? 'uk-bg-primary uk-contrast':'' }}" href="@route('/accounts')">
                                             <div class="uk-svg-adjust">
-                                                <img class="uk-margin-small-right inherit-color" src="@base('assets:app/media/icons/accounts.svg')" width="40" height="40" data-uk-svg alt="assets" /> 
+                                                <img class="uk-margin-small-right inherit-color" src="@base('assets:app/media/icons/accounts.svg')" width="40" height="40" data-uk-svg alt="assets" />
                                             </div>
                                             <div class="uk-text-truncate uk-text-small uk-margin-small-top">@lang('Accounts')</div>
                                         </a>

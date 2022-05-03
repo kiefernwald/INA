@@ -1,15 +1,19 @@
 {
 
-    "name": "agentejo/cockpit",
+    "name": "kiefernwald/ina",
     "type": "project",
-    "description": "Cockpit Headless CMS",
-    "keywords": ["cms", "headles", "api", "cockpit"],
-    "homepage": "https://getcockpit.com/",
+    "description": "INA Headless CMS",
+    "keywords": ["cms", "headles", "api", "ina"],
+    "homepage": "https://kiefernwald.net/",
     "license": "MIT",
     "authors": [
         {
             "name": "Artur Heinze",
             "email": "artur@agentejo.com"
+        },
+        {
+            "name": "Thomas Bretzke",
+            "email": "thomas.bretzke@kiefernwald.net"
         }
     ],
 

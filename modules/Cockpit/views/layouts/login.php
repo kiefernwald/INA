@@ -6,33 +6,6 @@
     <link rel="icon" href="@base('/favicon.png')" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <style>
-
-        .login-container {
-            width: 480px;
-            max-width: 90%;
-        }
-
-        .login-dialog {
-            box-shadow: 0 30px 75px 0 rgba(10, 25, 41, 0.2);
-        }
-
-        .login-image {
-            background-image: url(@url('assets:app/media/logo-plain.svg'));
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: 50% 50%;
-            height: 80px;
-        }
-
-        svg path,
-        svg rect,
-        svg circle {
-            fill: currentColor;
-        }
-
-    </style>
-
     {{ $app->assets($app['app.assets.base'], $app['debug'] ? time() : $app['cockpit/version']) }}
     {{ $app->assets(['assets:lib/uikit/js/components/form-password.min.js'], $app['debug'] ? time() : $app['cockpit/version']) }}
 
@@ -60,11 +33,9 @@
 
             <div id="login-dialog" class="login-dialog uk-panel-box uk-panel-space uk-nbfc" show="{!$user}">
 
-                <div name="header" class="uk-panel-space uk-text-bold uk-text-center">
+                <div name="header" class="login-header uk-panel-space uk-text-bold uk-text-center">
 
                     <div class="uk-margin login-image"></div>
-
-                    <h2 class="uk-text-bold uk-text-truncate"><span>{{ $app['app.name'] }}</span></h2>
 
                     <div class="uk-animation-shake uk-margin-top" if="{ error }">
                         <span class="uk-badge uk-badge-outline uk-text-danger">{ error }</span>
